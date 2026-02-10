@@ -1,0 +1,869 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 核心库（适配微信X5内核） -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.baomitu.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Mermaid 适配微信：延迟加载+兼容X5内核 -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js" defer></script>
+    <title>成都武侯祠慢享一日游：双人500元预算适老行程方案</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"></script>
+    <!-- 极简CSS：解决微信里Mermaid闪烁+兼容 -->
+    <style>
+    .mermaid { opacity: 0; transition: opacity 0.3s; }
+    .mermaid[mermaid-processed] { opacity: 1; }
+    /* 微信X5内核兼容：强制触发渲染 */
+    body { -webkit-transform: translateZ(0); transform: translateZ(0); }
+    </style>
+    <style>
+        .playfair { font-family: 'Playfair Display', serif; }
+        .inter { font-family: 'Inter', sans-serif; }
+        .nav-item { transition: all 0.3s ease; }
+        .nav-item:hover { background-color: #f3f4f6; }
+        .nav-item.active { background-color: #e5e7eb; border-left: 4px solid #3b82f6; }
+        .cite-link { color: #007bff; text-decoration: none; }
+        .cite-link:hover { text-decoration: underline; }
+        html { scroll-behavior: smooth; }
+        .mermaid { background-color: white; }
+        @media (max-width: 768px) {
+            nav.fixed.left-0 { display: none !important; }
+            main { margin-left: 0 !important; width: 100% !important; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 inter">
+    <!-- 左侧导航 -->
+    <nav class="fixed left-0 top-0 w-64 h-full bg-white shadow-lg overflow-y-auto z-10">
+        <div class="p-6">
+            <h2 class="text-lg font-bold text-gray-800 mb-6">目录导航</h2>
+            <ul class="space-y-2">
+                <li><a href="#hero" class="nav-item block px-4 py-2 text-sm text-gray-700 rounded">行程概览</a></li>
+                <li><a href="#summary" class="nav-item block px-4 py-2 text-sm text-gray-700 rounded">方案综述</a></li>
+                <li class="ml-4"><a href="#budget" class="nav-item block px-3 py-1 text-xs text-gray-600 rounded">预算拆解</a></li>
+                <li class="ml-4"><a href="#elderly-friendly" class="nav-item block px-3 py-1 text-xs text-gray-600 rounded">适老性说明</a></li>
+                <li><a href="#morning" class="nav-item block px-4 py-2 text-sm text-gray-700 rounded">上午行程</a></li>
+                <li class="ml-4"><a href="#key-attractions" class="nav-item block px-3 py-1 text-xs text-gray-600 rounded">游览重点</a></li>
+                <li class="ml-4"><a href="#photography" class="nav-item block px-3 py-1 text-xs text-gray-600 rounded">休闲打卡</a></li>
+                <li class="ml-4"><a href="#ticket-tips" class="nav-item block px-3 py-1 text-xs text-gray-600 rounded">门票贴士</a></li>
+                <li><a href="#lunch" class="nav-item block px-4 py-2 text-sm text-gray-700 rounded">午餐推荐</a></li>
+                <li class="ml-4"><a href="#qinshanzhai" class="nav-item block px-3 py-1 text-xs text-gray-600 rounded">钦善斋</a></li>
+                <li class="ml-4"><a href="#laomu-tihua" class="nav-item block px-3 py-1 text-xs text-gray-600 rounded">老妈蹄花</a></li>
+                <li class="ml-4"><a href="#huangcheng-xike" class="nav-item block px-3 py-1 text-xs text-gray-600 rounded">皇城熙客</a></li>
+                <li><a href="#afternoon" class="nav-item block px-4 py-2 text-sm text-gray-700 rounded">下午行程</a></li>
+                <li class="ml-4"><a href="#jinli-walk" class="nav-item block px-3 py-1 text-xs text-gray-600 rounded">漫步锦里</a></li>
+                <li class="ml-4"><a href="#snacks" class="nav-item block px-3 py-1 text-xs text-gray-600 rounded">特色小吃</a></li>
+                <li class="ml-4"><a href="#tea-break" class="nav-item block px-3 py-1 text-xs text-gray-600 rounded">惬意茶歇</a></li>
+                <li><a href="#summary-tips" class="nav-item block px-4 py-2 text-sm text-gray-700 rounded">总结贴士</a></li>
+                <li class="ml-4"><a href="#transportation" class="nav-item block px-3 py-1 text-xs text-gray-600 rounded">交通建议</a></li>
+                <li class="ml-4"><a href="#avoid-pitfalls" class="nav-item block px-3 py-1 text-xs text-gray-600 rounded">避坑指南</a></li>
+                <li class="ml-4"><a href="#preparation" class="nav-item block px-3 py-1 text-xs text-gray-600 rounded">行前准备</a></li>
+                <li><a href="#references" class="nav-item block px-4 py-2 text-sm text-gray-700 rounded">攻略参考</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 右侧内容区 -->
+    <main class="ml-64 min-h-screen">
+        <!-- 首页展示区 -->
+        <section id="hero" class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex items-center justify-center">
+            <div class="text-center max-w-4xl px-12">
+                <h1 class="playfair text-5xl font-bold text-gray-800 mb-8 italic">
+                    成都武侯祠慢享一日游
+                </h1>
+                <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                    <h2 class="text-2xl font-semibold text-gray-700 mb-6">双人500元预算适老行程方案</h2>
+                    <div class="grid grid-cols-2 gap-6 text-left">
+                        <div class="space-y-3">
+                            <p class="text-gray-600"><span class="font-semibold">🎯 目的地：</span>成都武侯祠 + 锦里古街</p>
+                            <p class="text-gray-600"><span class="font-semibold">👴 适老政策：</span>60岁+老人凭身份证免费</p>
+                            <p class="text-gray-600"><span class="font-semibold">🍜 特色美食：</span>钦善斋药膳汤锅、老妈蹄花</p>
+                        </div>
+                        <div class="space-y-3">
+                            <p class="text-gray-600"><span class="font-semibold">🚕 交通方式：</span>网约车为主，避免换乘步行</p>
+                            <p class="text-gray-600"><span class="font-semibold">🍂 最佳季节：</span>秋冬季，避开夏日高温潮湿</p>
+                            <p class="text-gray-600"><span class="font-semibold">💰 预算控制：</span>双人500元以内</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-lg text-gray-600 italic">
+                    "专为60岁以上银发族定制，充分利用成都老年人免票政策，将预算重点用于餐饮品质和交通舒适度"
+                </p>
+            </div>
+        </section>
+
+        <!-- 省流版 -->
+        <section class="px-12 py-12 max-w-6xl mx-auto">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">🚀 省流版</h2>
+                <div class="bg-blue-50 rounded-lg p-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-900 mb-3">核心信息</h3>
+                            <div class="space-y-2">
+                                <p class="text-sm text-gray-700"><span class="font-semibold">目的地：</span>成都武侯祠 + 锦里古街</p>
+                                <p class="text-sm text-gray-700"><span class="font-semibold">核心景点：</span>武侯祠博物馆、红墙夹道、锦里民俗街</p>
+                                <p class="text-sm text-gray-700"><span class="font-semibold">推荐活动：</span>三国文化讲解、红墙拍照、茶馆小憩</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-900 mb-3">实用贴士</h3>
+                            <div class="space-y-2">
+                                <p class="text-sm text-gray-700"><span class="font-semibold">特色美食：</span>钦善斋药膳汤锅、老妈蹄花、豆腐脑</p>
+                                <p class="text-sm text-gray-700"><span class="font-semibold">交通方式：</span>网约车为主，避免换乘步行</p>
+                                <p class="text-sm text-gray-700"><span class="font-semibold">门票政策：</span>60岁+老人凭身份证免费</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 方案综述与预算可行性分析 -->
+        <section id="summary" class="px-12 py-8 max-w-6xl mx-auto">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="playfair text-3xl font-bold text-gray-800 mb-8">一、方案综述与预算可行性分析</h2>
+                
+                <div id="budget" class="mb-8">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-6">💰 预算拆解：门票免费政策（60岁+）与餐饮交通分配</h3>
+                    <p class="text-gray-600 mb-6">
+                        本方案专为60岁以上银发族定制，充分利用成都市老年人优待政策，将双人总预算控制在500元以内，重点向餐饮品质与交通舒适度倾斜。
+                    </p>
+                    
+                    <div class="overflow-hidden rounded-lg shadow-md bg-white mb-6">
+                        <table class="min-w-full">
+                            <thead class="bg-gradient-to-r from-blue-50 to-blue-100">
+                                <tr>
+                                    <th class="px-6 py-4 text-left font-bold text-gray-800 border-b-2 border-blue-300">费用类目</th>
+                                    <th class="px-6 py-4 text-right font-bold text-gray-800 border-b-2 border-blue-300">预估金额 (双人)</th>
+                                    <th class="px-6 py-4 text-left font-bold text-gray-800 border-b-2 border-blue-300">核心依据与说明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-blue-50 transition-colors">
+                                    <td class="px-6 py-4 border-b border-gray-100 font-semibold text-green-600">景区门票</td>
+                                    <td class="px-6 py-4 border-b border-gray-100 text-right font-bold text-green-600">0 元</td>
+                                    <td class="px-6 py-4 border-b border-gray-100 text-gray-700">
+                                        <strong>政策红利</strong>：60周岁(含)以上中国公民凭身份证免费入馆，无需换票<cite><a href="#ref-23" class="cite-link">[23]</a></cite>。成人票价原价50元/人，此项节省100元<cite><a href="#ref-27" class="cite-link">[27]</a></cite>。
+                                    </td>
+                                </tr>
+                                <tr class="bg-gray-50 hover:bg-blue-50 transition-colors">
+                                    <td class="px-6 py-4 border-b border-gray-100 font-semibold text-gray-700">餐饮美食</td>
+                                    <td class="px-6 py-4 border-b border-gray-100 text-right font-bold text-gray-900">260 元</td>
+                                    <td class="px-6 py-4 border-b border-gray-100 text-gray-700">
+                                        <strong>午餐(200元)</strong>：钦善斋药膳/皇城熙客正餐；<strong>小吃(60元)</strong>：锦里三大炮、赖汤圆等适老小吃。
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-blue-50 transition-colors">
+                                    <td class="px-6 py-4 border-b border-gray-100 font-semibold text-gray-700">交通出行</td>
+                                    <td class="px-6 py-4 border-b border-gray-100 text-right font-bold text-gray-900">80 元</td>
+                                    <td class="px-6 py-4 border-b border-gray-100 text-gray-700">
+                                        <strong>网约车为主</strong>：机场/酒店接送至武侯祠(约40元)，区域内短途接驳。
+                                    </td>
+                                </tr>
+                                <tr class="bg-gray-50 hover:bg-blue-50 transition-colors">
+                                    <td class="px-6 py-4 border-b border-gray-100 font-semibold text-gray-700">备用金</td>
+                                    <td class="px-6 py-4 border-b border-gray-100 text-right font-bold text-gray-900">160 元</td>
+                                    <td class="px-6 py-4 border-b border-gray-100 text-gray-700">
+                                        <strong>弹性空间</strong>：用于购买茶叶、应急药物或临时增加的茶馆消费。
+                                    </td>
+                                </tr>
+                                <tr class="bg-blue-50 font-bold">
+                                    <td class="px-6 py-4 border-b border-blue-300">总计</td>
+                                    <td class="px-6 py-4 border-b border-blue-300 text-right text-blue-600">500 元</td>
+                                    <td class="px-6 py-4 border-b border-blue-300 text-gray-700">
+                                        <strong>高可行性</strong>：预算结构以"吃好、行稳"为核心，剔除门票硬性支出。
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="elderly-friendly" class="mb-8">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-6">👴 适老性说明：慢节奏、不换乘、少步行路线设计</h3>
+                    <p class="text-gray-600 mb-6">
+                        针对老年人体力特点，本行程通过"时间换空间"策略，严格控制连续步行时长，确保全天步数控制在8000步以内。
+                    </p>
+                    
+                    <div class="mermaid bg-white rounded-lg p-4 border">
+                        gantt
+                            dateFormat HH:mm
+                            todayMarker off
+                            axisFormat %H:%M
+                            title 武侯祠适老慢游节奏规划表
+                            %% 强制白底配置
+                            section 上午：深度游
+                            入园休整(09点30) :t1, 09:30, 30m
+                            祠庙讲解(10点00) :t2, after t1, 90m
+                            section 中午：颐养
+                            养生午餐(11点30) :t3, 11:30, 90m
+                            section 下午：漫游
+                            锦里慢逛(13点00) :t4, 13:00, 120m
+                            茶馆小憩(15点00) :t5, after t4, 60m
+                            返程(16点00)     :t6, after t5, 30m
+                    </div>
+
+                    <div class="bg-green-50 rounded-lg p-6 mt-6">
+                        <h4 class="font-semibold text-gray-800 mb-4">适老设计细节：</h4>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">•</span>
+                                <span><strong>零换乘负担</strong>：建议直接打车至"武侯祠博物馆正门"，避免地铁出站后的长距离步行。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">•</span>
+                                <span><strong>错峰游览</strong>：上午10:00-11:30为旅行团高峰期，安排在此阶段前完成核心讲解参观，或利用此时段在红墙夹道拍照<cite><a href="#ref-17" class="cite-link">[17]</a></cite>。</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">•</span>
+                                <span><strong>高频休息</strong>：锦里区域茶馆众多，每步行40分钟强制安排15-20分钟坐歇。</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 上午行程 -->
+        <section id="morning" class="px-12 py-8 max-w-6xl mx-auto">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="playfair text-3xl font-bold text-gray-800 mb-8">二、上午：拜谒三国圣地（武侯祠深度游）</h2>
+                
+                <div id="key-attractions" class="mb-8">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-6">🏯 游览重点：君臣合祀祠庙与"攻心联"文化讲解</h3>
+                    <p class="text-gray-600 mb-6">
+                        武侯祠是中国唯一的君臣合祀祠庙，游览路线沿南北中轴线展开，依次为大门、二门、刘备殿、过厅、诸葛亮殿、三义庙及惠陵<cite><a href="#ref-7" class="cite-link">[7]</a></cite>。针对老年游客，建议将体力分配给以下核心文化节点：
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-400">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">文臣武将廊</h4>
+                            <p class="text-sm text-gray-700 mb-2"><span class="font-semibold">核心看点：</span>两侧长廊供奉蜀汉50位文臣武将塑像<cite><a href="#ref-7" class="cite-link">[7]</a></cite></p>
+                            <p class="text-sm text-gray-700"><span class="font-semibold">游览建议：</span>慢走细看，可在此寻找熟悉的赵云、关羽等形象，适合拍照留念</p>
+                        </div>
+                        <div class="bg-indigo-50 rounded-lg p-6 border-l-4 border-indigo-400">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">诸葛亮殿</h4>
+                            <p class="text-sm text-gray-700 mb-2"><span class="font-semibold">核心看点：</span>清人赵藩所撰"攻心联"<cite><a href="#ref-18" class="cite-link">[18]</a></cite></p>
+                            <p class="text-sm text-gray-700"><span class="font-semibold">游览建议：</span><strong>核心驻足点</strong>。建议停留15分钟，此处是理解三国治世哲学的精髓</p>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-6 border-l-4 border-green-400">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">刘备殿 (惠陵)</h4>
+                            <p class="text-sm text-gray-700 mb-2"><span class="font-semibold">核心看点：</span>刘备墓冢与寝殿合二为一，古柏森森<cite><a href="#ref-18" class="cite-link">[18]</a></cite></p>
+                            <p class="text-sm text-gray-700"><span class="font-semibold">游览建议：</span><strong>休息点</strong>。此处台阶较少，且有一级级缓坡，适合老人行走</p>
+                        </div>
+                        <div class="bg-yellow-50 rounded-lg p-6 border-l-4 border-yellow-400">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">三义庙</h4>
+                            <p class="text-sm text-gray-700 mb-2"><span class="font-semibold">核心看点：</span>纪念刘关张桃园结义，庭院古朴<cite><a href="#ref-26" class="cite-link">[26]</a></cite></p>
+                            <p class="text-sm text-gray-700"><span class="font-semibold">游览建议：</span>快速通过，重点在殿外拍照即可</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-50 rounded-lg p-6 border-l-4 border-red-400">
+                        <h4 class="font-semibold text-gray-800 mb-3">👵 讲解避坑提示</h4>
+                        <p class="text-gray-700">
+                            60岁以上老人建议租赁电子讲解器（约30元），避免轻信景区门口非官方的高价"野导游"<cite><a href="#ref-26" class="cite-link">[26]</a></cite>。也可使用微信小程序免费收听基础讲解。
+                        </p>
+                    </div>
+                </div>
+
+                <div id="photography" class="mb-8">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-6">📸 休闲打卡：红墙夹道与惠陵古柏（避开人群的拍照点）</h3>
+                    <p class="text-gray-600 mb-6">
+                        为避开锦里侧入口的人流高峰，建议利用上午10:00-11:00光线柔和时段，按照以下节奏进行拍摄与游览：
+                    </p>
+
+                    <div class="mermaid bg-white rounded-lg p-4 border mb-6">
+                        gantt
+                            dateFormat HH:mm
+                            todayMarker off
+                            axisFormat %H:%M
+                            title 上午适老游览节奏与打卡节点
+                            %% 强制白底配置
+                            section 游览阶段
+                            入园安检(09点00)       :t1, 09:00, 30m
+                            中轴线游览(09点30)     :t2, after t1, 60m
+                            section 黄金摄影点
+                            红墙夹道摄影(10点30)   :t3, after t2, 30m
+                            惠陵古柏休息(11点00)   :t4, after t3, 30m
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white border rounded-lg p-6">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">红墙夹道（避开人流版）</h4>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li><span class="font-semibold">位置：</span>紧邻惠陵，连接中轴线与园林区</li>
+                                <li><span class="font-semibold">最佳时间：</span>上午11:00前，光线透过竹叶洒在红墙上<cite><a href="#ref-26" class="cite-link">[26]</a></cite></li>
+                                <li><span class="font-semibold">姿势建议：</span>路面平整，老人可站在夹道中央，利用红墙竹影做背景</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white border rounded-lg p-6">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">惠陵古柏</h4>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li><span class="font-semibold">位置：</span>刘备墓冢周围</li>
+                                <li><span class="font-semibold">特色：</span>千年古柏与红墙相映，环境肃穆庄严</li>
+                                <li><span class="font-semibold">安全：</span>地面为平整石板路，无高台阶障碍，轮椅可轻松抵达</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ticket-tips" class="mb-8">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-6">🎫 门票贴士：60岁以上老人免费预约流程</h3>
+                    <p class="text-gray-600 mb-6">
+                        成都武侯祠实行实名制入园，针对老年群体享有优待政策，请严格按照以下步骤操作：
+                    </p>
+
+                    <div class="bg-green-50 rounded-lg p-6 mb-6">
+                        <h4 class="font-semibold text-gray-800 mb-3">政策依据</h4>
+                        <p class="text-gray-700">
+                            60周岁（含）以上中国公民凭本人有效身份证件原件免费入馆，无需换取纸质票<cite><a href="#ref-23" class="cite-link">[23]</a></cite>。
+                        </p>
+                    </div>
+
+                    <div class="overflow-hidden rounded-lg shadow-md bg-white">
+                        <table class="min-w-full">
+                            <thead class="bg-gradient-to-r from-blue-50 to-blue-100">
+                                <tr>
+                                    <th class="px-6 py-4 text-left font-bold text-gray-800 border-b-2 border-blue-300">步骤</th>
+                                    <th class="px-6 py-4 text-left font-bold text-gray-800 border-b-2 border-blue-300">动作说明</th>
+                                    <th class="px-6 py-4 text-left font-bold text-gray-800 border-b-2 border-blue-300">注意事项</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-blue-50 transition-colors">
+                                    <td class="px-6 py-4 border-b border-gray-100 font-bold text-blue-600">Step 1</td>
+                                    <td class="px-6 py-4 border-b border-gray-100 text-gray-700">抵达入口</td>
+                                    <td class="px-6 py-4 border-b border-gray-100 text-gray-700">导航定位"武侯祠博物馆正门"</td>
+                                </tr>
+                                <tr class="bg-gray-50 hover:bg-blue-50 transition-colors">
+                                    <td class="px-6 py-4 border-b border-gray-100 font-bold text-blue-600">Step 2</td>
+                                    <td class="px-6 py-4 border-b border-gray-100 text-gray-700">刷证过闸</td>
+                                    <td class="px-6 py-4 border-b border-gray-100 text-gray-700"><strong>无需换票</strong>，直接刷证过闸，节省排队时间</td>
+                                </tr>
+                                <tr class="hover:bg-blue-50 transition-colors">
+                                    <td class="px-6 py-4 border-b border-gray-100 font-bold text-blue-600">Step 3</td>
+                                    <td class="px-6 py-4 border-b border-gray-100 text-gray-700">无感入园</td>
+                                    <td class="px-6 py-4 border-b border-gray-100 text-gray-700">人脸识别或刷证进入</td>
+                                </tr>
+                                <tr class="bg-gray-50 hover:bg-blue-50 transition-colors">
+                                    <td class="px-6 py-4 border-b border-gray-100 font-bold text-blue-600">Step 4</td>
+                                    <td class="px-6 py-4 border-b border-gray-100 text-gray-700">领取赠品</td>
+                                    <td class="px-6 py-4 border-b border-gray-100 text-gray-700">凭身份证可在游客中心免费盖"武侯祠"纪念章留念<cite><a href="#ref-22" class="cite-link">[22]</a></cite></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="bg-yellow-50 rounded-lg p-6 mt-6 border-l-4 border-yellow-400">
+                        <h4 class="font-semibold text-gray-800 mb-3">⚠️ 重要提醒</h4>
+                        <p class="text-gray-700">
+                            虽然门票免费，但仍建议在"成都武侯祠"官方小程序提前进行实名预约，以免遇到瞬时流量过大限流时无法入园<cite><a href="#ref-18" class="cite-link">[18]</a></cite>。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 午餐推荐 -->
+        <section id="lunch" class="px-12 py-8 max-w-6xl mx-auto">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="playfair text-3xl font-bold text-gray-800 mb-8">三、午餐：品尝地道养生川菜（推荐餐厅）</h2>
+                
+                <div id="qinshanzhai" class="mb-8">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-6">🥣 钦善斋（首选）：药膳汤锅与软糯菜品（适合老人牙口）</h3>
+                    <p class="text-gray-600 mb-6">
+                        钦善斋位于武侯祠博物馆西南80米处（武侯祠大街247号），是成都知名的药膳老字号，开业24年，主打"养生汤锅+经典川菜"，其口味清淡温和，食材炖煮软烂，极适合牙口较弱的老年群体<cite><a href="#ref-29" class="cite-link">[29]</a></cite><cite><a href="#ref-30" class="cite-link">[30]</a></cite>。
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-blue-50 rounded-lg p-6">
+                            <h4 class="font-bold text-lg text-gray-900 mb-4">核心指标</h4>
+                            <div class="space-y-3">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">人均消费</span>
+                                    <span class="font-semibold">94元/人</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">步行距离</span>
+                                    <span class="font-semibold">360米</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">口味特征</span>
+                                    <span class="font-semibold">清淡、药膳香</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-6">
+                            <h4 class="font-bold text-lg text-gray-900 mb-4">推荐菜品</h4>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li>• <strong>淮药文火牛肉</strong>：山药软糯，牛肉酥烂入味<cite><a href="#ref-30" class="cite-link">[30]</a></cite></li>
+                                <li>• <strong>归芪莲藕乌鸡煲</strong>：汤底清澈滋补，适合温补<cite><a href="#ref-35" class="cite-link">[35]</a></cite></li>
+                                <li>• <strong>鸡丝凉面</strong>：劲道且佐料脆香，开胃不辣</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="laomu-tihua" class="mb-8">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-6">🐷 丁太婆老妈蹄花：非遗传承，软糯脱骨（高性价比选择）</h3>
+                    <div class="bg-white border rounded-lg p-6">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-900 mb-3">核心卖点</h4>
+                                <p class="text-sm text-gray-700">
+                                    <strong>雪豆蹄花汤</strong>。猪蹄炖至脱骨状态，筷子一夹即烂，雪豆绵软沙糯，汤色奶白<cite><a href="#ref-36" class="cite-link">[36]</a></cite>。
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-900 mb-3">适老优势</h4>
+                                <ul class="text-sm text-gray-700 space-y-1">
+                                    <li>• 完全无需咀嚼硬物</li>
+                                    <li>• 入口即化</li>
+                                    <li>• 补充胶原蛋白</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-900 mb-3">消费信息</h4>
+                                <ul class="text-sm text-gray-700 space-y-1">
+                                    <li>• 人均消费：50元</li>
+                                    <li>• 距离：828米</li>
+                                    <li>• 建议：打车前往</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="huangcheng-xike" class="mb-8">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-6">🥢 皇城熙客：经典川菜与多种选择（环境适老）</h3>
+                    <div class="bg-white border rounded-lg p-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-900 mb-3">价格优势</h4>
+                                <p class="text-sm text-gray-700 mb-3">
+                                    人均消费约<strong>32元</strong>，是三家推荐中门槛最低的选择，且提供多种档次的套餐<cite><a href="#ref-38" class="cite-link">[38]</a></cite>。
+                                </p>
+                                <h4 class="font-bold text-lg text-gray-900 mb-3">菜品推荐</h4>
+                                <ul class="text-sm text-gray-700 space-y-1">
+                                    <li>• 蒸咸烧白：五花肉肥而不腻</li>
+                                    <li>• 松茸土鸡汤：菌香浓郁</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-900 mb-3">服务设施</h4>
+                                <ul class="text-sm text-gray-700 space-y-2">
+                                    <li><span class="font-semibold">无障碍友好：</span>明确标注有无障碍设施</li>
+                                    <li><span class="font-semibold">文化氛围：</span>餐厅内有表演，装修古色古香<cite><a href="#ref-38" class="cite-link">[38]</a></cite></li>
+                                    <li><span class="font-semibold">距离：</span>距景区仅353米</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-6">📊 三大餐厅决策辅助表</h3>
+                    <div class="overflow-hidden rounded-lg shadow-md bg-white">
+                        <table class="min-w-full">
+                            <thead class="bg-gradient-to-r from-blue-50 to-blue-100">
+                                <tr>
+                                    <th class="px-6 py-4 text-left font-bold text-gray-800 border-b-2 border-blue-300">决策维度</th>
+                                    <th class="px-6 py-4 text-left font-bold text-gray-800 border-b-2 border-blue-300">钦善斋 (首选)</th>
+                                    <th class="px-6 py-4 text-left font-bold text-gray-800 border-b-2 border-blue-300">丁太婆老妈蹄花 (平替)</th>
+                                    <th class="px-6 py-4 text-left font-bold text-gray-800 border-b-2 border-blue-300">皇城熙客 (多样)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-blue-50 transition-colors">
+                                    <td class="px-6 py-4 border-b border-gray-100 font-semibold">核心体验</td>
+                                    <td class="px-6 py-4 border-b border-gray-100">高端养生</td>
+                                    <td class="px-6 py-4 border-b border-gray-100">非遗小吃</td>
+                                    <td class="px-6 py-4 border-b border-gray-100">文化川菜</td>
+                                </tr>
+                                <tr class="bg-gray-50 hover:bg-blue-50 transition-colors">
+                                    <td class="px-6 py-4 border-b border-gray-100 font-semibold">双人预算</td>
+                                    <td class="px-6 py-4 border-b border-gray-100">~190元</td>
+                                    <td class="px-6 py-4 border-b border-gray-100">~100元</td>
+                                    <td class="px-6 py-4 border-b border-gray-100">~65元</td>
+                                </tr>
+                                <tr class="hover:bg-blue-50 transition-colors">
+                                    <td class="px-6 py-4 border-b border-gray-100 font-semibold">步行距离</td>
+                                    <td class="px-6 py-4 border-b border-gray-100 text-green-600">80米 (最近)</td>
+                                    <td class="px-6 py-4 border-b border-gray-100 text-red-600">828米 (需打车)</td>
+                                    <td class="px-6 py-4 border-b border-gray-100">353米</td>
+                                </tr>
+                                <tr class="bg-gray-50 hover:bg-blue-50 transition-colors">
+                                    <td class="px-6 py-4 border-b border-gray-100 font-semibold">菜品硬度</td>
+                                    <td class="px-6 py-4 border-b border-gray-100">⭐⭐⭐ (软烂)</td>
+                                    <td class="px-6 py-4 border-b border-gray-100">⭐⭐⭐⭐⭐ (脱骨)</td>
+                                    <td class="px-6 py-4 border-b border-gray-100">⭐⭐⭐ (适中)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 下午行程 -->
+        <section id="afternoon" class="px-12 py-8 max-w-6xl mx-auto">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="playfair text-3xl font-bold text-gray-800 mb-8">四、下午：锦里民俗体验与下午茶</h2>
+                
+                <div id="jinli-walk" class="mb-8">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-6">🏮 漫步锦里：感受川西民俗与三国氛围</h3>
+                    <p class="text-gray-600 mb-6">
+                        锦里古街紧邻武侯祠博物馆，全长550米，是体验"老成都"生活场景的典型街区<cite><a href="#ref-33" class="cite-link">[33]</a></cite>。对于老年游客，下午的游览重点在于"慢走"与"看景"，而非高强度购物。
+                    </p>
+
+                    <div class="mermaid bg-white rounded-lg p-4 border mb-6">
+                        gantt
+                            dateFormat HH:mm
+                            todayMarker off
+                            axisFormat %H:%M
+                            title 锦里下午慢游节奏表
+                            %% 强制白底配置
+                            section 漫步阶段
+                            锦里入口拍照(13点00) :t1, 13:00, 20m
+                            民俗街区慢走(13点20) :t2, after t1, 40m
+                            section 体验阶段
+                            特色小吃品鉴(14点00) :t3, after t2, 30m
+                            茶馆坐下休息(14点30) :t4, after t3, 60m
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-400">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">建筑风格</h4>
+                            <p class="text-sm text-gray-700">
+                                青瓦错落、朱红灯笼，街道由青石板铺成，虽然蜿蜒但路面平整，适合老人行走<cite><a href="#ref-16" class="cite-link">[16]</a></cite>。
+                            </p>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-6 border-l-4 border-green-400">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">三国元素</h4>
+                            <p class="text-sm text-gray-700">
+                                街区内分布着大量与三国相关的雕塑与装饰，如"桃园结义"场景重现，适合在此拍摄全家福<cite><a href="#ref-24" class="cite-link">[24]</a></cite>。
+                            </p>
+                        </div>
+                        <div class="bg-yellow-50 rounded-lg p-6 border-l-4 border-yellow-400">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">非遗展示</h4>
+                            <p class="text-sm text-gray-700">
+                                沿途可见蜀锦、竹编等传统手工艺店铺，建议"只看不买"贵重工艺品，避免消费陷阱。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="snacks" class="mb-8">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-6">🍡 特色小吃：三大炮、张飞牛肉试吃与购买建议</h3>
+                    <p class="text-gray-600 mb-6">
+                        锦里小吃众多，但老年人在饮食上需特别注意"软烂易消化"与"糖分控制"。以下是针对该群体的筛选建议：
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white border rounded-lg p-6">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">李长清三大炮<cite><a href="#ref-40" class="cite-link">[40]</a></cite></h4>
+                            <p class="text-sm text-gray-700 mb-2"><span class="font-semibold">价格：</span>11元/人</p>
+                            <p class="text-sm text-gray-700">
+                                <span class="font-semibold">建议：</span><strong>观赏性大于食用性</strong>。由于蘸料含大量红糖黄豆粉，建议两人分食一小份，避免血糖负担。
+                            </p>
+                        </div>
+                        <div class="bg-white border rounded-lg p-6">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">张飞牛肉<cite><a href="#ref-41" class="cite-link">[41]</a></cite></h4>
+                            <p class="text-sm text-gray-700 mb-2"><span class="font-semibold">价格：</span>60元/人</p>
+                            <p class="text-sm text-gray-700">
+                                <span class="font-semibold">建议：</span><strong>适合打包伴手礼</strong>。推荐购买灯影牛肉丝或手撕豆干，肉质细嫩，不费牙口。
+                            </p>
+                        </div>
+                        <div class="bg-white border rounded-lg p-6">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">豆相识豆腐脑<cite><a href="#ref-42" class="cite-link">[42]</a></cite></h4>
+                            <p class="text-sm text-gray-700 mb-2"><span class="font-semibold">价格：</span>25元/人</p>
+                            <p class="text-sm text-gray-700">
+                                <span class="font-semibold">建议：</span><strong>最佳下午茶</strong>。豆腐脑温补易消化，推荐点"馓子牛肉豆腐脑"，既能解馋又能补充蛋白质。
+                            </p>
+                        </div>
+                        <div class="bg-white border rounded-lg p-6">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">蓉城老南门小吃<cite><a href="#ref-39" class="cite-link">[39]</a></cite></h4>
+                            <p class="text-sm text-gray-700 mb-2"><span class="font-semibold">价格：</span>14元/人</p>
+                            <p class="text-sm text-gray-700">
+                                <span class="font-semibold">建议：</span><strong>高性价比补给</strong>。面条煮得较软，杂酱面中的豌豆软糯沙绵，适合作为下午茶的主食补充。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-50 rounded-lg p-6 mt-6 border-l-4 border-red-400">
+                        <h4 class="font-semibold text-gray-800 mb-3">⚠️ 避坑提示</h4>
+                        <p class="text-gray-700">
+                            锦里内部部分小吃（如油炸串串、生冷刺身）卫生状况与冷热交替的油腻口感可能引起肠胃不适，建议老人<strong>只吃熟食</strong>，并在正规店铺购买。
+                        </p>
+                    </div>
+                </div>
+
+                <div id="tea-break" class="mb-8">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-6">🍵 惬意茶歇：找个茶馆歇脚或品尝赖汤圆/豆腐脑</h3>
+                    <p class="text-gray-600 mb-6">
+                        逛累后，建议寻找一处安静的茶馆或老字号小吃店歇脚，度过下午最舒适的一小时。
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-blue-50 rounded-lg p-6">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">锦里内茶文化区</h4>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li><span class="font-semibold">特色：</span>锦里内有多处露天与半露天茶座，常伴有川剧变脸或民谣表演<cite><a href="#ref-16" class="cite-link">[16]</a></cite></li>
+                                <li><span class="font-semibold">消费：</span>盖碗茶均价30-50元/杯</li>
+                                <li><span class="font-semibold">建议：</span>若想看戏，需注意音量避免过大刺激；若喜安静，建议选择靠里的位置</li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-6">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">外部老字号（步行可达）</h4>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li><span class="font-semibold">推荐：</span>皇城坝小吃</li>
+                                <li><span class="font-semibold">位置：</span>武侯祠大街259号</li>
+                                <li><span class="font-semibold">特色：</span>品尝担担面与锅贴，店内环境相对宽敞<cite><a href="#ref-33" class="cite-link">[33]</a></cite></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-yellow-50 rounded-lg p-6 mt-6">
+                        <h4 class="font-semibold text-gray-800 mb-3">👴 适老休息策略</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li><span class="font-semibold">时长控制：</span>建议休息时长控制在40-60分钟，避免久坐导致腿脚麻木</li>
+                            <li><span class="font-semibold">补充热水：</span>成都盖碗茶通常为绿茶，性微寒，老人可自带保温杯冲泡自带的温性茶（如普洱、红茶）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 总结与实用贴士 -->
+        <section id="summary-tips" class="px-12 py-8 max-w-6xl mx-auto">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="playfair text-3xl font-bold text-gray-800 mb-8">五、总结与实用贴士</h2>
+                
+                <div id="transportation" class="mb-8">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-6">🚕 交通建议：全程"地铁+网约车"无缝衔接方案</h3>
+                    <p class="text-gray-600 mb-6">
+                        针对老年人体力特点，推荐采用"定点网约车"策略，坚决避免在景区周边进行长距离步行寻找地铁站。
+                    </p>
+
+                    <div class="overflow-hidden rounded-lg shadow-md bg-white">
+                        <table class="min-w-full">
+                            <thead class="bg-gradient-to-r from-blue-50 to-blue-100">
+                                <tr>
+                                    <th class="px-6 py-4 text-left font-bold text-gray-800 border-b-2 border-blue-300">行程节点</th>
+                                    <th class="px-6 py-4 text-left font-bold text-gray-800 border-b-2 border-blue-300">推荐交通方式</th>
+                                    <th class="px-6 py-4 text-left font-bold text-gray-800 border-b-2 border-blue-300">路线说明与适老细节</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-blue-50 transition-colors">
+                                    <td class="px-6 py-4 border-b border-gray-100 font-semibold">抵达成都</td>
+                                    <td class="px-6 py-4 border-b border-gray-100">网约车/专车</td>
+                                    <td class="px-6 py-4 border-b border-gray-100 text-gray-700">
+                                        <strong>双流/天府机场 → 武侯祠</strong>直接定位"武侯祠博物馆正门"。建议打车，费用约40-60元，实现"零步行"接驳。
+                                    </td>
+                                </tr>
+                                <tr class="bg-gray-50 hover:bg-blue-50 transition-colors">
+                                    <td class="px-6 py-4 border-b border-gray-100 font-semibold">前往午餐</td>
+                                    <td class="px-6 py-4 border-b border-gray-100">网约车</td>
+                                    <td class="px-6 py-4 border-b border-gray-100 text-gray-700">
+                                        <strong>武侯祠 → 丁太婆老妈蹄花</strong>若选择较远的必吃榜餐厅，门口直接打车，车程约3分钟，费用起步价即可。
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-blue-50 transition-colors">
+                                    <td class="px-6 py-4 border-b border-gray-100 font-semibold">景区内移动</td>
+                                    <td class="px-6 py-4 border-b border-gray-100">步行+休息</td>
+                                    <td class="px-6 py-4 border-b border-gray-100 text-gray-700">
+                                        <strong>武侯祠 → 锦里</strong>两景区紧邻，无需乘车。从武侯祠侧门出，步行2分钟即达锦里入口<cite><a href="#ref-22" class="cite-link">[22]</a></cite>。
+                                    </td>
+                                </tr>
+                                <tr class="bg-gray-50 hover:bg-blue-50 transition-colors">
+                                    <td class="px-6 py-4 border-b border-gray-100 font-semibold">返程回酒店</td>
+                                    <td class="px-6 py-4 border-b border-gray-100">网约车</td>
+                                    <td class="px-6 py-4 border-b border-gray-100 text-gray-700">
+                                        <strong>锦里/武侯祠 → 酒店</strong>下午16:30左右在锦里星巴克或武侯祠门口叫车。此时段为晚高峰前夕，叫车响应较快。
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="bg-blue-50 rounded-lg p-6 mt-6">
+                        <h4 class="font-semibold text-gray-800 mb-3">💡 适老叫车技巧</h4>
+                        <p class="text-gray-700">
+                            建议子女提前为父母在手机地图上设置好"武侯祠博物馆正门"和"锦里古街停车场"为收藏地址，方便老人一键叫车。
+                        </p>
+                    </div>
+                </div>
+
+                <div id="avoid-pitfalls" class="mb-8">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-6">⚠️ 避坑指南：避免购买昂贵"三国文创"与景区拉客店</h3>
+                    <p class="text-gray-600 mb-6">
+                        武侯祠周边商业氛围浓厚，需警惕三大针对老年游客的消费陷阱。
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-red-50 rounded-lg p-6 border-l-4 border-red-400">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">野导游/高价讲解</h4>
+                            <p class="text-sm text-gray-700 mb-3">
+                                景区门口有人主动搭讪，声称"50元带路"或"免费讲解"，实则带去购物店或推销高价香火<cite><a href="#ref-26" class="cite-link">[26]</a></cite>。
+                            </p>
+                            <p class="text-sm text-gray-700">
+                                <span class="font-semibold">避坑策略：</span><strong>拒绝搭讪</strong>。60岁以上老人直接刷身份证入园，讲解请使用官方小程序免费收听。
+                            </p>
+                        </div>
+                        <div class="bg-yellow-50 rounded-lg p-6 border-l-4 border-yellow-400">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">三国文创消费</h4>
+                            <p class="text-sm text-gray-700 mb-3">
+                                景区内售卖的"诸葛亮蒲扇"、"桃木剑"等纪念品溢价较高，或路边摊贩兜售的"古董"<cite><a href="#ref-28" class="cite-link">[28]</a></cite>。
+                            </p>
+                            <p class="text-sm text-gray-700">
+                                <span class="font-semibold">避坑策略：</span><strong>只看不买</strong>。纪念品建议去市区超市或正规商场购买。景区内仅推荐购买明信片或盖章<cite><a href="#ref-22" class="cite-link">[22]</a></cite>。
+                            </p>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-400">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">拉客餐饮店</h4>
+                            <p class="text-sm text-gray-700 mb-3">
+                                锦里或大街上，服务员非常热情地拉客进店，门口招牌写着"正宗川菜老店"。
+                            </p>
+                            <p class="text-sm text-gray-700">
+                                <span class="font-semibold">避坑策略：</span><strong>看评分不看招牌</strong>。坚决不进没有大众点评/美团评分或评分低于4.0的店铺。认准本报告推荐的老字号<cite><a href="#ref-33" class="cite-link">[33]</a></cite>。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="preparation" class="mb-8">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-6">🎒 行前准备：证件携带与防滑保暖提醒</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-green-50 rounded-lg p-6">
+                            <h4 class="font-bold text-lg text-gray-900 mb-4">1. 必备证件清单</h4>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li><span class="font-semibold">身份证原件（核心）：</span><strong>必须随身携带</strong>。这是60岁以上老人享受免票政策的唯一凭证<cite><a href="#ref-23" class="cite-link">[23]</a></cite></li>
+                                <li><span class="font-semibold">老年证/退休证：</span>部分药店或合作商户可能需要出示</li>
+                                <li><span class="font-semibold">医保卡：</span>以防身体不适需要购药</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-6">
+                            <h4 class="font-bold text-lg text-gray-900 mb-4">2. 衣物与装备</h4>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li><span class="font-semibold">鞋履：</span>锦里路面多为青石板，<strong>严禁穿皮鞋或硬底鞋</strong>，建议穿着防滑底的运动鞋</li>
+                                <li><span class="font-semibold">保暖：</span>成都2月平均气温约5-10℃，建议"洋葱式穿衣"</li>
+                                <li><span class="font-semibold">雨具：</span>成都气候多变，建议随身携带轻便折叠伞</li>
+                            </ul>
+                        </div>
+                        <div class="bg-yellow-50 rounded-lg p-6">
+                            <h4 class="font-bold text-lg text-gray-900 mb-4">3. 饮食与健康</h4>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li><span class="font-semibold">保温杯：</span>老年人多喜热饮，景区内各游客中心及茶馆均提供免费开水</li>
+                                <li><span class="font-semibold">常用药：</span>建议携带速效救心丸、降压药及创可贴等急救药品</li>
+                                <li><span class="font-semibold">健康：</span>景区内虽设有医务室，但自备更为安心</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 攻略参考 -->
+        <section id="references" class="px-12 py-8 max-w-6xl mx-auto">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="playfair text-3xl font-bold text-gray-800 mb-8">攻略参考</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <div class="space-y-3">
+                            <p class="text-sm text-gray-700" id="ref-7">[7] <cite><a href="https://m.dianping.com/shop/1783582?msource=longcat" target="_blank" class="cite-link">成都武侯祠博物馆</a></cite></p>
+                            <p class="text-sm text-gray-700" id="ref-16">[16] <cite><a href="https://m.dianping.com/shop/1781728?msource=longcat" target="_blank" class="cite-link">锦里古街</a></cite></p>
+                            <p class="text-sm text-gray-700" id="ref-17">[17] <cite><a href="https://touch.piao.qunar.com/touch/detail_2721389637.html" target="_blank" class="cite-link">武侯祠门票-去哪儿网门票预订</a></cite></p>
+                            <p class="text-sm text-gray-700" id="ref-18">[18] <cite><a href="https://m.dianping.com/feeddetail/461596166?sceneType=0&bizType=29&utm_source=ugcshare&msource=longcat" target="_blank" class="cite-link">与古园一别，思绪万千</a></cite></p>
+                            <p class="text-sm text-gray-700" id="ref-22">[22] <cite><a href="https://m.dianping.com/feeddetail/460232487?sceneType=0&bizType=29&utm_source=ugcshare&msource=longcat" target="_blank" class="cite-link">武侯祠一日游全攻略！不绕路版！！</a></cite></p>
+                            <p class="text-sm text-gray-700" id="ref-23">[23] <cite><a href="https://m.cd.bendibao.com/mip/205466.shtm" target="_blank" class="cite-link">2026武侯祠成都大庙会门票价格+购票入口</a></cite></p>
+                            <p class="text-sm text-gray-700" id="ref-24">[24] <cite><a href="https://m.dianping.com/feeddetail/461450721?sceneType=0&bizType=29&utm_source=ugcshare&msource=longcat" target="_blank" class="cite-link">成都武侯祠大庙会灯会攻略🔥三国主题</a></cite></p>
+                            <p class="text-sm text-gray-700" id="ref-26">[26] <cite><a href="https://m.dianping.com/feeddetail/460889918?sceneType=0&bizType=29&utm_source=ugcshare&msource=longcat" target="_blank" class="cite-link">武侯祠｜三国秘境的人文漫游指南🏯</a></cite></p>
+                            <p class="text-sm text-gray-700" id="ref-27">[27] <cite><a href="http://cd.bendibao.com/live/2013415/145533.shtm" target="_blank" class="cite-link">2024成都武侯祠国庆门票多少钱?(附购票入口)</a></cite></p>
+                            <p class="text-sm text-gray-700" id="ref-28">[28] <cite><a href="https://m.dianping.com/feeddetail/461455001?sceneType=0&bizType=29&utm_source=ugcshare&msource=longcat" target="_blank" class="cite-link">武侯祠旅游全攻略｜三国文脉美食避坑一站式指南</a></cite></p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="space-y-3">
+                            <p class="text-sm text-gray-700" id="ref-29">[29] <cite><a href="https://mp.weixin.qq.com/s?__biz=MzUzNTc5MzA5MA==&mid=2247630749&idx=1&sn=1e7c2b23e128b7011fe9c324ea605d2f&chksm=fbf2ea633919f8787899a60febda64303f62c4ee12733f2b671e88578bbb695f478ac6151a84&scene=27" target="_blank" class="cite-link">武侯祠外除了锦里还能吃啥?</a></cite></p>
+                            <p class="text-sm text-gray-700" id="ref-30">[30] <cite><a href="https://m.dianping.com/feeddetail/455394114?sceneType=0&bizType=29&utm_source=ugcshare&msource=longcat" target="_blank" class="cite-link">带长辈吃饭被夸爆！这家24年养生川菜也太会了</a></cite></p>
+                            <p class="text-sm text-gray-700" id="ref-33">[33] <cite><a href="https://www.sohu.com/a/160683929_99935427" target="_blank" class="cite-link">【实用攻略】成都锦里/武侯祠附近特色美食</a></cite></p>
+                            <p class="text-sm text-gray-700" id="ref-35">[35] <cite><a href="https://m.dianping.com/shopinfo/528673?msource=longcat" target="_blank" class="cite-link">钦善斋·养生膳食·精典川菜 武侯祠店</a></cite></p>
+                            <p class="text-sm text-gray-700" id="ref-36">[36] <cite><a href="https://m.dianping.com/shopinfo/673456848?msource=longcat" target="_blank" class="cite-link">丁太婆老妈蹄花 武侯祠非遗传承店</a></cite></p>
+                            <p class="text-sm text-gray-700" id="ref-38">[38] <cite><a href="https://m.dianping.com/shopinfo/1343458589?msource=longcat" target="_blank" class="cite-link">皇城熙客•川菜•成都小吃 武侯祠店</a></cite></p>
+                            <p class="text-sm text-gray-700" id="ref-39">[39] <cite><a href="https://m.dianping.com/shopinfo/1253876527?msource=longcat" target="_blank" class="cite-link">蓉城老南门.名小吃 武侯祠东街店</a></cite></p>
+                            <p class="text-sm text-gray-700" id="ref-40">[40] <cite><a href="https://m.dianping.com/shopinfo/3117022?msource=longcat" target="_blank" class="cite-link">李长清三大炮 锦里店</a></cite></p>
+                            <p class="text-sm text-gray-700" id="ref-41">[41] <cite><a href="https://m.dianping.com/shopinfo/1762050118?msource=longcat" target="_blank" class="cite-link">张飞牛肉专卖店•四川特产 武侯祠店</a></cite></p>
+                            <p class="text-sm text-gray-700" id="ref-42">[42] <cite><a href="https://m.dianping.com/shopinfo/1463313507?msource=longcat" target="_blank" class="cite-link">豆相识•乐山小吃 武侯祠店</a></cite></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // 初始化 Mermaid
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            securityLevel: 'loose',
+            fontFamily: 'Inter, sans-serif'
+        });
+
+        // 导航高亮和平滑滚动
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-item');
+            const sections = document.querySelectorAll('section[id]');
+
+            // 点击导航链接平滑滚动
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // 滚动时高亮当前导航项
+            function highlightNavigation() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (window.pageYOffset >= sectionTop - 200) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', highlightNavigation);
+            highlightNavigation(); // 初始调用
+        });
+    </script>
+</body>
+</html><div class="custowatermark" style="position: absolute; right: 10px; top: 10px; width: 66px; height: 26px; pointer-events: none; display: flex; align-items: center; justify-content: center; z-index: 999;">
+    <img src="https://s3plus.meituan.net/aigc-media-resources/longcat/watermark.png" alt="" style="width: 100%; height: 100%; display: block; pointer-events: none;" />
+</div>
+<div style="display: block; color: #333; font-size: 14px; opacity: 1;">
+    (AI生成)
+</div>
